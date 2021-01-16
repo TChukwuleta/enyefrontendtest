@@ -13,7 +13,7 @@ function Table() {
 
     const getProfile = async () => {
         try {
-            const result = await axios.get('http://api.enye.tech/v1/challenge/records')
+            const result = await axios.get('https://api.enye.tech/v1/challenge/records')
             console.log(result.data)
             setProfiles(result.data.records.profiles)
         }
@@ -108,7 +108,7 @@ function Table() {
                             <div>
                                 <SearchBar {...toolkitprops.searchProps} />
                                 <BootstrapTable
-                                    {...toolkitprops.baseProps}
+                                    {...toolkitprops.baseProps}   
                                     {...paginationTableProps}
                                     defaultSorted={defaultSorted}
                                     defaultSortDirection="asc"
